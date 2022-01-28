@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import img1 from '../../../image/feature1.png'
 import img2 from '../../../image/feature2.png'
 
@@ -10,9 +11,9 @@ const Features = () => {
                     <div className="row justify-content-center">
                         <div className="col-lg-7">
                             <div className="text-center mb-4">
-                                <h2 className="heading">Template Features</h2>
-                                <p className="text-muted fs-17">Ut enim ad minima veniam quis nostrum exercitationem ullam
-                                    corporis suscipit laboriosam nisi commodi consequatur.</p>
+                                <h2 className="heading">Best Services That We Provide</h2>
+                                <p className="text-muted fs-17">Wedding discovery, directory & planning platform in Bangladesh,
+                                    where you can find the best wedding vendors with their contacts</p>
                             </div>
                         </div>
                     </div>
@@ -25,9 +26,8 @@ const Features = () => {
                                     </div>
                                     <div className="flex-grow-1 ms-2">
                                         <div className="content">
-                                            <h5 className="title">Fully Responsive</h5>
-                                            <p className="text-muted">One disadvantage of Lorum Ipsum is that in certain letters
-                                                which is said more than.</p>
+                                            <h5 className="title">Photographers</h5>
+                                            <p className="text-muted">A picture is worth a thousand words. It clearly and beautifully captures your emotions- the joy, the laughter, the tears, you name it.</p>
                                             <a href="javascipt:void(0)" className="text-dark">Read More <i
                                                 className="mdi mdi-chevron-right"></i></a>
                                         </div>
@@ -39,9 +39,8 @@ const Features = () => {
                             <div className="feature-card p-3 py-sm-4 rounded">
                                 <i className="mdi mdi-layers-triple-outline text-primary float-start me-3 h2"></i>
                                 <div className="content d-block overflow-hidden">
-                                    <h5 className="title">Fresh Layouts</h5>
-                                    <p className="text-muted mt-2">The most well-known dummy text is the 'Lorem', which
-                                        well-known is said which is said.</p>
+                                    <h5 className="title">Makeup Artists</h5>
+                                    <p className="text-muted mt-2">In contemporary makeup, Zahid Khan Makeover has received "Best Makeup artist Award-2017" for it's exclusive makeup.</p>
                                     <a href="javascipt:void(0)" className="text-dark">Read More <i
                                         className="mdi mdi-chevron-right"></i></a>
                                 </div>
@@ -52,9 +51,9 @@ const Features = () => {
                                 <div className="feature-card p-3 py-sm-4 rounded">
                                     <i className="mdi mdi-clipboard-flow-outline text-primary float-start me-3 h2"></i>
                                     <div className="content d-block overflow-hidden">
-                                        <h5 className="title">Modern Workflow</h5>
-                                        <p className="text-muted mt-2">Moreover, in Latin only words at the beginning of
-                                            sentences which is said are capitalized.</p>
+                                        <h5 className="title">Wedding Cars</h5>
+                                        <p className="text-muted mt-2">Zoom Rent a Car in Dhaka has become the top
+                                            trade name in car rental services in Bangladesh..</p>
                                         <a href="javascipt:void(0)" className="text-dark">Read More <i
                                             className="mdi mdi-chevron-right"></i></a>
                                     </div>
@@ -72,16 +71,14 @@ const Features = () => {
                         </div>
                         <div className="col-lg-5">
                             <div data-aos="fade-left" data-aos-duration="1800">
-                                <h3 className="feature-heading mb-2">Marketing</h3>
-                                <p className="text-muted">Now that we've aligned the details, it's time to get things mapped out
-                                    and organized. Now that we've aligned the details. </p>
+                                <h3 className="feature-heading mb-2">WEDDING VENDOR</h3>
+                                <p className="text-muted">BDWEDDING is the largest where you can find the best
+                                    wedding vendors with their contacts and tons of trusted reviews at the click of a button</p>
                                 <ul className="feature-list">
-                                    <li><i className="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Advertising for a
-                                        trade magazine</li>
+                                    <li><i className="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Showcase your Business profile on your personal page</li>
                                     <li><i className="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Designing
                                         marketing materials </li>
-                                    <li><i className="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Update website
-                                        content</li>
+                                    <li><i className="mdi mdi-checkbox-marked-circle-outline text-primary"></i>Get contacted directily by customers</li>
                                 </ul>
                                 <a className="btn btn-primary" href="avascipt:void(0)">Learn more</a>
                             </div>
@@ -91,8 +88,7 @@ const Features = () => {
                         <div className="col-lg-6">
                             <div data-aos="fade-right" data-aos-duration="1800">
                                 <h3 className="feature-heading">We aim to help busy peoples</h3>
-                                <p className="text-muted">Lorem text is also used to demonstrate the appearance of different
-                                    typefaces and layouts.</p>
+                                <p className="text-muted">Reach target customers by Multiple Navigation Vendor Access System.</p>
                                 <div className="accordion" id="accordionExample">
                                     <div className="accordion-item">
                                         <h2 className="accordion-header" id="headingOne">
@@ -107,12 +103,8 @@ const Features = () => {
                                         <div id="collapseOne" className="accordion-collapse collapse show"
                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                <p className="fs-14 text-muted mb-1">Lorem text is also used to demonstrate the
-                                                    appearance of different typefaces and layouts, and in general the
-                                                    content of dummy text is nonsensical.</p>
-                                                <a href="javascript:void(0)">
-                                                    Check it out <i className="mdi mdi-arrow-right"></i>
-                                                </a>
+                                                <p className="fs-14 text-muted mb-1">Whether you are looking for hiring wedding planners or top photographers or for just some ideas and inspirations for your upcoming wedding,</p>
+                                                <p className='fs-14 text-decoration-none'> <Link to='/aboutUs'>  Check it out</Link> <i className="mdi mdi-arrow-right"></i></p>
                                             </div>
                                         </div>
                                     </div>
@@ -130,12 +122,8 @@ const Features = () => {
                                         <div id="collapseTwo" className="accordion-collapse collapse"
                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                <p className="fs-14 text-muted mb-0">Lorem text is also used to demonstrate the
-                                                    appearance of different typefaces and layouts, and in general the
-                                                    content of dummy text is nonsensical.</p>
-                                                <a href="j" className="fs-14 text-decoration-none">
-                                                    Check it out <i className="mdi mdi-arrow-right"></i>
-                                                </a>
+                                                <p className="fs-14 text-muted mb-0">Whether you are looking for hiring wedding planners or top photographers or for just some ideas and inspirations for your upcoming wedding,.</p>
+                                                <p className='fs-14 text-decoration-none'> <Link to='/aboutUs'>  Check it out</Link> <i className="mdi mdi-arrow-right"></i></p>
                                             </div>
                                         </div>
                                     </div>
@@ -153,12 +141,10 @@ const Features = () => {
                                         <div id="collapseThree" className="accordion-collapse collapse"
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                <p className="fs-14 text-muted mb-0">Lorem text is also used to demonstrate the
-                                                    appearance of different typefaces and layouts, and in general the
-                                                    content of dummy text is nonsensical.</p>
-                                                <a href="javascript:void(0)" className="fs-14 text-decoration-none">
-                                                    Check it out <i className="mdi mdi-arrow-right"></i>
-                                                </a>
+                                                <p className="fs-14 text-muted mb-0">Whether you are looking for hiring wedding planners or top photographers or for just some ideas and inspirations for your upcoming wedding.</p>
+
+                                                <p className='fs-14 text-decoration-none'> <Link to='/aboutUs'>  Check it out</Link> <i className="mdi mdi-arrow-right"></i></p>
+
                                             </div>
                                         </div>
                                     </div>

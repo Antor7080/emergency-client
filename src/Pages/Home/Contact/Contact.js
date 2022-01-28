@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../../../image/map.png'
 
 const Contact = () => {
     return (
@@ -19,7 +20,8 @@ const Contact = () => {
                             <div data-aos="fade-right" data-aos-duration="1800">
                                 <div className="card">
                                     <div className="card-body">
-                                        <div className="map">   </div>
+                                        <div >
+                                            <img className='img-fluid' src={img} alt="" /> </div>
                                     </div>
                                 </div>
                             </div>
@@ -27,7 +29,7 @@ const Contact = () => {
 
                         <div className="col-lg-6">
                             <div data-aos="fade-left" data-aos-duration="1800">
-                                <form method="post" onsubmit="return validateForm()" className="contact-form" name="myForm" id="myForm">
+                                <form method="post" className="contact-form" name="myForm" id="myForm">
                                     <span id="error-msg"></span>
                                     <div className="row rounded-3 py-3">
                                         <div className="col-lg-12">

@@ -8,16 +8,17 @@ import {
 import useFirebase from '../../../Hooks/useFirebase';
 
 const Navbar = () => {
-    const { user, logOut } = useFirebase()
+    const { user, logOut, admin } = useFirebase()
+
     return (
         <div>
-            <nav className="navbar navbar-expand-lg fixed-top navbar-white navbar-custom sticky" id="navbar">
+            <nav className="navbar navbar-expand-lg text-uppercase fixed-top navbar-white navbar-custom sticky" id="navbar">
                 <div className="container">
 
-                    <a className="navbar-brand text-uppercase" href="index-1.html">
-                        <img className="logo-light" src="images/logo-light.png" alt="" height="25" />
-                        <img className="logo-dark" src="images/logo-dark.png" alt="" height="25" />
-                    </a>
+                    <Nav.Link className="navbar-brand nav-link text-uppercase" as={HashLink} to="/home#home">
+                        <img className="logo-light" src="https://i.ibb.co/NCbbBNZ/logo.png" alt="" height="35" />
+                        <img className="logo-dark" src="https://i.ibb.co/NCbbBNZ/logo.png" alt="" height="35" />
+                    </Nav.Link>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,14 +54,41 @@ const Navbar = () => {
 
                         {
                             user.email ? <>
-                                <button onClick={logOut} type="button" style={{ padding: "10px 20px" }}
-                                    className="btn btn-primary nav-btn">
-                                    Logout
-                                </button>
+
+                                <div className="dropdown">
+                                    <button className="btn btn-primary nav-btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {user.displayName}
+                                    </button>
+                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                                        {
+                                            !admin && <> <li className='text-center nav-link'> <Link to='/my-order'>My Order</Link></li>
+                                                {/*  <li className='text-center nav-link'> <Link to='/AddReview'>Add Review</Link></li> */}
+                                            </>
+                                        }
+
+                                        {
+                                            admin && <>
+                                                <li className='text-center nav-link'> <Link to='/AddTeamMember'>Add Team Member</Link></li>
+                                                <li className='text-center nav-link'> <Link to='/manageOrder'>Manage Order</Link></li>
+                                                <li className='text-center nav-link'> <Link to='/manageteam'>Manage Team</Link></li>
+                                                <li className='text-center nav-link'> <Link to='/manage-services'>Manage Service</Link></li>
+                                                <li className='text-center nav-link'> <Link to='/add-serices'>Add Service</Link></li>
+                                            </>
+                                        }
+
+                                        <li className='text-center'>  <button onClick={logOut} type="button" style={{ padding: "10px 20px" }}
+                                            className="btn btn-danger nav-btn">
+                                            Logout
+                                        </button></li>
+                                    </ul>
+                                </div>
+
                             </> :
                                 <>
+
                                     <button type="button" className="btn btn-primary nav-btn">
-                                        <Link style={{ color: "white", }} as={Link} to="/signup">Sign UP</Link>
+                                        <Link style={{ color: "white", }} as={Link} to="/login">LOGIN</Link>
                                     </button>
                                 </>
                         }

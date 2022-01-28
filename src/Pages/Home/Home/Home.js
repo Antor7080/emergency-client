@@ -19,6 +19,7 @@ const Home = () => {
             <Pricing></Pricing>
             <Team></Team>
             <Contact></Contact>
+            
         </div>
     );
 };

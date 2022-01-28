@@ -819,34 +819,10 @@ html {
   outline: none;
 }
 .home-1 {
-  background-image: url(../image/banner.jpg);
+  background-image: url(https://i.ibb.co/chxwtnJ/banner.jpg);
 }
 .home-1 .bg-overlay {
-  background: linear-gradient(131deg, #0f5650, transparent);
-}
-.home-2 {
-  background-image: url(../image/banner.jpg);
-}
-.home-2 #myVideo {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.home-2 .bg-overlay {
-  background-color: rgba(37, 45, 49, 0.6);
-  background-image: none;
-}
-.home-3 {
-  background-image: url(../image/banner.jpg);
-}
-.home-3 .bg-overlay {
-  background-color: rgba(37, 45, 49, 0.6);
-  background-image: none;
+  background: linear-gradient(131deg, #820da0, transparent);
 }
 .home-modal {
   border: 0;
@@ -891,41 +867,7 @@ html {
 .bottom-img img {
   width: 100%;
 }
-.home-4 {
-  background-color: #00776d;
-}
-.home-4 .home-btn .modal-btn .btn-icon {
-  color: #00776d;
-  background-color: #fff;
-}
-.home-4 .shape-1 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 100%;
-  animation: shape-1 1.5s alternate infinite ease;
-}
-.home-4 .shape-2 {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  left: 40%;
-  animation: shape-2 2.5s alternate infinite ease;
-}
-.home-4 .shape-3 {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 0%;
-  animation: shape-3 3.5s alternate infinite ease;
-}
-.home-4 .frame {
-  width: 55px;
-  height: 55px;
-  position: absolute;
-  left: 70%;
-  animation: frame 3.5s alternate infinite ease;
-}
+
 @keyframes shape-1 {
   0% {
     top: 80%;
@@ -973,74 +915,7 @@ html {
     top: 0%;
   }
 }
-.home-5 {
-  background-color: #00776d;
-  padding: 244px ​0;
-}
-.home-5 .home-shape {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: auto;
-  bottom: -2px;
-  left: -15px;
-}
-.home-5 .contact-form {
-  background-color: rgba(0, 119, 109, 0.3);
-  border: 1px solid #fff;
-  border-radius: 10px;
-  padding: 20px;
-}
-.home-5 .contact-form .icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 999px;
-  font-size: 30px;
-  color: #fff;
-}
-.home-5 .input-group-text {
-  padding: 12px 15px;
-  border: none;
-  background-color: rgba(187, 186, 186, 0.4);
-  color: #252d31;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  bottom: 0;
-}
-.home-5 .form-control {
-  padding: 12px 20px !important;
-  padding-left: 58px !important;
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-}
-.home-6 {
-  background-image: url("../images/home-6bg.png");
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 64% 90%, 22% 100%, 0 87%);
-}
-.home-6 .book {
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  left: -2%;
-  animation: book 1.5s alternate infinite ease;
-}
-.home-6 .drive {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: 58%;
-  animation: drive 2.5s alternate infinite ease;
-}
+
 @keyframes book {
   0% {
     top: 31%;
@@ -1079,14 +954,12 @@ html {
   .home .home-heading h1 {
     font-size: 36px;
   }
-  .home-2 {
-    padding: 130px 0;
-  }
+  
 }
 .cta {
   position: relative;
   background: linear-gradient(rgba(37, 45, 49, 0.7), rgba(37, 45, 49, 0.7)),
-    url("../images/cta.jpg") fixed no-repeat;
+    url(https://i.ibb.co/chxwtnJ/banner.jpg) fixed no-repeat;
   color: #fff;
 }
 .cta .cta-heading {
@@ -1477,9 +1350,17 @@ html {
   line-height: 1.5;
   border-radius: 0.25rem;
 }
+
+.bg-account-pages1 {
+  background: #fff;
+  background: linear-gradient(180deg, rgb(100, 26, 197) 0%, #31d1c1 81%);
+  display: flex;
+  align-items: center;
+}
+
 .bg-account-pages {
   background: #fff;
-  background: linear-gradient(180deg, rgb(6, 61, 18) 0%, #29746d 81%);
+  background: linear-gradient(180deg, rgb(113, 4, 156) 0%, #971897 81%);
   display: flex;
   align-items: center;
 }

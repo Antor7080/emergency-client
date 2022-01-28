@@ -21,7 +21,7 @@ const useFirebase = () => {
         setIsLoading(true);
         console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
-       
+
             .then((userCredential) => {
                 setAuthError('');
                 const newUser = { email, displayName: name };
@@ -43,7 +43,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
     const databaseUrl = (path) => {
-        const url = `http://localhost:5000/${path}`
+        const url = `https://peaceful-wildwood-90899.herokuapp.com/${path}`
         return url
     }
     const loginUser = (email, password, location, navigate) => {
@@ -98,7 +98,9 @@ const useFirebase = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
+
     }, [user.email])
+
 
     const logOut = () => {
         setIsLoading(true);
@@ -112,7 +114,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://peaceful-wildwood-90899.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

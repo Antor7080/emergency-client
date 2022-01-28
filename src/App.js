@@ -1,4 +1,3 @@
-import { AOS } from 'aos';
 import './App.css';
 import Home from './Pages/Home/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -12,6 +11,16 @@ import Login from './Pages/Login/Login';
 import Signup from './Pages/SignUP/Signup';
 import AddTeamMember from './Admin/AddTeamMember/AddTeamMember';
 import AddReview from './Admin/AddReview/AddReview';
+import ManageTeamMember from './Admin/ManageTeamMember/ManageTeamMember';
+import AddService from './Admin/AddService/AddService';
+import ManageService from './Admin/ManageService/ManageService';
+import NotFound from './Pages/NotFound/NotFound';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import AdminRoute from './Pages/Login/AdminRoute/AdminRoute';
+import AddAdmin from './Admin/AddAdmin/AddAdmin';
+import ManageOrder from './Admin/ManageOrder/ManageOrder';
+import MyOrders from './Pages/MyOrders/MyOrders';
 
 function App() {
   /* Theme Name:  Kasy- Responsive Landing page template
@@ -243,20 +252,38 @@ function App() {
 
   return (
 
+
     <BrowserRouter>
       <Navbar></Navbar>
       <Routes>
-        <Route path="/login" element={<Login />}>
+        <Route path="login" element={<Login />}>
         </Route>
-        <Route path="/AddTeamMember" element={<AddTeamMember />}>
+        <Route path="AddTeamMember" element={<AdminRoute><AddTeamMember /></AdminRoute>}>
         </Route>
-        <Route path="/AddReview" element={<AddReview />}>
+        {/* <Route path="AddReview" element={<PrivateRoute><AddReview /></PrivateRoute>}>
+        </Route> */}
+        <Route path="manageOrder" element={<AdminRoute><ManageOrder /></AdminRoute>}>
         </Route>
-        <Route path="/signup" element={<Signup />}>
+        <Route path="manageteam" element={<AdminRoute><ManageTeamMember /></AdminRoute>}>
+        </Route>
+        <Route path="manage-services/*" element={<AdminRoute><ManageService /></AdminRoute>}>
+        </Route>
+        <Route path="place-order/:id" element={<PrivateRoute><PlaceOrder /></PrivateRoute>}>
+        </Route>
+        <Route path="my-order" element={<PrivateRoute><MyOrders></MyOrders></PrivateRoute>}>
+        </Route>
+        <Route path="add-serices" element={<AdminRoute><AddService /></AdminRoute>}>
+        </Route>
+        <Route path="signup" element={<Signup />}>
         </Route>
         <Route index element={<Home />} />
-        <Route path="/home" element={<Home />}>
-
+        <Route path="home" element={<Home />}>
+        </Route>
+        <Route path="addAdmin" element={<AdminRoute><AddAdmin /></AdminRoute>}>
+        </Route>
+        <Route exact path="/" element={<Home />}>
+        </Route>
+        <Route path="*" element={<NotFound />}>
         </Route>
       </Routes>
       <Footer></Footer>

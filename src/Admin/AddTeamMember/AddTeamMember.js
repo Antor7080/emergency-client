@@ -1,6 +1,30 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
+import useFirebase from '../../Hooks/useFirebase';
 
 const AddTeamMember = () => {
+    const [teamMemberData, setTeamMemberData] = useState();
+    const { databaseUrl } = useFirebase()
+    const url = databaseUrl('teamMember')
+    const handleonChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newTeamMemberData = { ...teamMemberData };
+        newTeamMemberData[field] = value;
+        setTeamMemberData(newTeamMemberData);
+    }
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        axios.post(url, teamMemberData)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('Added Successfully');
+
+                }
+            })
+    }
+
     return (
         <div>
 
@@ -24,39 +48,36 @@ const AddTeamMember = () => {
                                         <div className="img-overlay"></div>
                                         <div className="position-relative pt-4 py-5 mb-1">
                                             <h5 className="text-white">Welcome!</h5>
-                                            <p className="text-white-50 mb-0 fs-14">Sign up For a New Account.</p>
+                                            <p className="text-white-50 mb-0 fs-14">Add Your New TeamMember.</p>
                                         </div>
                                     </div>
                                     <div className="card-body position-relative">
                                         <div className="p-4 mt-n5 bg-white card rounded pb-0">
-                                            <form /* onSubmit={handleLoginSubmit} */>
+                                            <form onSubmit={handleSubmit}>
                                                 <div className="mb-3">
                                                     <label className="fs-14 mb-2" for="first">Name</label>
-                                                    <input type="text" /* onChange={handleonChange} */ className="form-control" id="first name" name="name" placeholder="First Name" />
+                                                    <input type="text" onChange={handleonChange} className="form-control" id="Name" name="name" placeholder="Name" />
                                                 </div>
                                                 <div className="mb-3">
-                                                    <label className="fs-14 mb-2" for="email">Email</label>
-                                                    <input /* onChange={handleonChange}  */name="email"
-                                                        type="email" className="form-control" id="email" placeholder="Enter Email" />
+                                                    <label className="fs-14 mb-2" for="first">Designation</label>
+                                                    <input type="text" onChange={handleonChange} className="form-control" id="first name" name="designation" placeholder="Designation" />
                                                 </div>
-                                                <div className="mb-2">
-                                                    <label className="fs-14 mb-2" for="password">Password</label>
-                                                    <input
-                                                        name="password"
-                                                      /*   onChange={handleonChange} */
-                                                        type="password" className="form-control" id="password" placeholder="Enter Password" />
+                                                <div className="mb-3">
+                                                    <label className="fs-14 mb-2" for="first">Image</label>
+                                                    <input type="text" onChange={handleonChange} className="form-control" id="first name" name="img" placeholder="Image Link" />
                                                 </div>
 
+
                                                 <div className="mt-4">
-                                                    <button className="btn btn-primary w-100" type="submit">Sign up</button>
+                                                    <button className="btn btn-primary w-100" type="submit">Add</button>
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
-                                
-                                   
+
+
                                 </div>
-                             
+
                             </div>
                         </div>
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Nav } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
 
 const Banner = () => {
     return (
@@ -9,16 +11,17 @@ const Banner = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-7">
                             <div className="home-heading">
-                                <h1 className="mb-3 text-white">Start your Successful
-                                    Business With <span className="typewrite text-primary d-none d-sm-inline-block"
+                                <h1 className="mb-3 text-white">Best Event Management
+                                    Waiting For Your Tuch <span className="typewrite text-primary d-none d-sm-inline-block"
                                         data-period="2000" data-type='[ "Oxhen" ]'>
                                         <span className="wrap"></span> </span>
                                 </h1>
                             </div>
-                            <p className="text-white-50 fs-20">Explore and learn more about everything from machine learning and
-                                global payments to scaling your team.</p>
+                            <p className="text-white-50 fs-20">BDWEDDING is the largest & most loved Wedding discovery,
+                             directory & planning platform in Bangladesh</p>
                             <div className="home-btn hstack gap-2 flex-column d-sm-block">
-                                <a className="btn btn-white me-1" href="">Request Free Demo</a>
+                                <Nav style={{width:'160px'}} className="btn btn-white me-1" as={HashLink} to="/home#contact">Contact Us</Nav>
+
                             </div>
                         </div>
                     </div>

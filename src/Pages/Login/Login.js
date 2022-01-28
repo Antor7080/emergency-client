@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-unused-expressions */
+import React, { useEffect, useState } from 'react';
 import { Alert, Button, Spinner } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useFirebase from '../../Hooks/useFirebase.js';
@@ -27,6 +28,12 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         signInWithGoogle(location, navigate)
     }
+    const rediract = location.state?.from || "/";
+
+    useEffect(() => {
+        user?.email ? navigate(rediract) : "";
+    }, [user, navigate, rediract]);
+
 
     return (
         <div >
@@ -90,7 +97,8 @@ const Login = () => {
                                         <div className="col-lg-6">
                                             <ul className="list-unstyled btn-social-icon mb-0">
                                                 <li className="list-inline-item">
-                                                    <button onClick={handleGoogleSignIn}>
+
+                                                    <button style={{ background: "none", border: 'none' }} className='text-white' onClick={handleGoogleSignIn}>
                                                         <i className="mdi mdi-google"></i>
                                                     </button>
                                                 </li>
